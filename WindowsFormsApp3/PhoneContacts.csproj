@@ -47,11 +47,30 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\ContactControllers.cs" />
+    <Compile Include="Controller\SaveDataControllers.cs" />
+    <Compile Include="Model\ContactListUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Model\ContactListUserControl.Designer.cs">
+      <DependentUpon>ContactListUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\ContactUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Model\ContactUserControl.Designer.cs">
       <DependentUpon>ContactUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\AddContactForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AddContactForm.Designer.cs">
+      <DependentUpon>AddContactForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ContactInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ContactInfoForm.Designer.cs">
+      <DependentUpon>ContactInfoForm.cs</DependentUpon>
     </Compile>
     <Compile Include="View\MainForm.cs">
       <SubType>Form</SubType>
@@ -61,6 +80,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Model\ContactListUserControl.resx">
+      <DependentUpon>ContactListUserControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Model\ContactUserControl.resx">
       <DependentUpon>ContactUserControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -73,6 +95,15 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\AddContactForm.resx">
+      <DependentUpon>AddContactForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ContactInfoForm.resx">
+      <DependentUpon>ContactInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

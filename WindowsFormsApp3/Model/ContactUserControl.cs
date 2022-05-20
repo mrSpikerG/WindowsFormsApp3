@@ -18,6 +18,7 @@ namespace WindowsFormsApp3.Model
         public string Surname { get; set; }
         public string Adress { get; set; }
         public List<string> Phones { get; set; }
+        public string PhoneString { get; set; }
 
 
         public ContactUserControl(string name, string surname, List<string> phonesNum, string adress)
@@ -28,11 +29,20 @@ namespace WindowsFormsApp3.Model
             this.Phones = phonesNum;
             this.Adress = adress;
 
-            for (int i = 0; i < phonesNum.Count; i++)
+            /*for (int i = 0; i < phonesNum.Count; i++)
             {
                 phonesNum[i] = $"Phone {i + 1}: {phonesNum[i]}";
-            }
-            string phones = String.Join("\n", phonesNum);
+            }*/
+            this.PhoneString = String.Join("\n", phonesNum);
+
+            this.label1.Text = $"{name} {surname}";
+            this.label2.Text = adress;
+
+
+        }
+        public override string ToString()
+        {
+            return $"{Name} {Surname}";
         }
     }
 }

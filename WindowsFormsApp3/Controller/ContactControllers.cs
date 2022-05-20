@@ -7,28 +7,25 @@ using WindowsFormsApp3.Model;
 
 namespace WindowsFormsApp3.Controller
 {
-    public class ContactControllers
+    public static class ContactControllers
     {
-        public  List<ContactUserControl> contacts;
-        public ContactControllers()
+        public static  List<ContactUserControl> contacts = new List<ContactUserControl>() { 
+          /*  new ContactUserControl("name", "surname", new List<string> { "number1", "number2" }, "adress"),
+            new ContactUserControl("Vasya", "Petrov", new List<string> { "number1", "number2" }, "Dnipro"),
+            new ContactUserControl("Petyua", "vasilyev", new List<string> { "number1", "number2" }, "Kyiv")*/
+        };
+      
+
+        public static List<ContactUserControl> getContacts()
         {
-            contacts = new List<ContactUserControl>();
-
-            addContacts(new ContactUserControl("name", "surname", new List<string> { "number1", "number2" }, "adress"));
-            addContacts(new ContactUserControl("Vasya", "Petrov", new List<string> { "number1", "number2" }, "Dnipro"));
-            addContacts(new ContactUserControl("Petyua", "vasilyev", new List<string> { "number1", "number2" }, "Kyiv"));
-        }
-
-
-        public  List<ContactUserControl> getContacts()
-        {
+          //  SaveDataControllers.getData();
             return contacts;
         }
-        public  void addContacts(ContactUserControl newContact)
+        public static void addContacts(ContactUserControl newContact)
         {
             contacts.Add(newContact);
         }
-        public void removeContacts(ContactUserControl removedContact)
+        public static void removeContacts(ContactUserControl removedContact)
         {
             contacts.Remove(removedContact);
         }
